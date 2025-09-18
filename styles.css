@@ -1,6 +1,270 @@
 /* 12columns.css | Created by Katherine Kato | Released under the MIT license */
 /* GitHub: https://kathykato.github.io/12columns/ */
- .container {
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  cursor: url(docs/assets/cursor.cur), crosshair;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.5;
+  color: lightcoral;
+  margin: 0 auto;
+  padding: 0;
+  max-width: fit-content;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+/* Global Typography */
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+form,
+textarea {
+  font-size: 1rem;
+}
+
+/* HEADER */
+
+header {
+  text-align: center;
+  margin: 1em auto;
+  margin-top: 250px;
+}
+
+.section {
+  padding: 1em 1em;
+  width: 100%;
+  margin: 1em auto;
+}
+
+
+/* Buttons */
+
+.button,
+.btn-light,
+.btn-dark {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  transition: all 0.1s;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.button {
+  color: lightgoldenrodyellow;
+  background-color: lightcoral;
+  width: 15em;
+
+}
+
+.btn-light {
+  color: #0a2472;
+  background-color: white;
+}
+
+.btn-dark {
+  color: white;
+  background-color: #0a2472;
+}
+
+
+
+a[class='button']:hover,
+input[class='button']:hover {
+  background-color: lightgoldenrodyellow;
+  color: lightcoral;
+  font-weight: 700;
+  transform: scale(1.08);
+}
+
+/* funky sentences */
+.wrapper {
+  padding: 1em;
+  width: 400px;
+  margin: 0 auto;
+  text-align: start;
+  margin-bottom: 400px;
+}
+
+.containera {
+  display: inline-block;
+  height: 64px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.containera ul {
+  animation: cycle-items 4s steps(6) alternate infinite;
+}
+
+.containera li {
+  font-size: 40px;
+  height: 70px;
+}
+
+
+@keyframes cycle-items {
+  to {
+    transform: translateY(-100%)
+  }
+}
+
+/* about me */
+
+.aboutme {
+  background-color: #fef7f7;
+  padding: 5rem;
+  margin-top: -5rem;
+}
+
+/*up button*/
+
+
+
+.scroll-up {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-up {
+  margin-top: 5%;
+  margin-left: 47%;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid lightcoral;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-up:before {
+    position: absolute;
+    top: calc(70% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(135deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid lightcoral;
+    border-width: 0px 0 2px 2px;
+
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+/*down button*/
+
+
+
+.go-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.go-down {
+
+  left: 50%;
+  margin-top: 10em;
+  margin-left: 45%;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid lightcoral;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.go-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid lightcoral;
+    border-width: 0px 0 2px 2px;
+
+}
+
+.footer-text{
+  margin-left: 5%;
+  margin-top: 2rem;
+}
+
+
+
+.container {
 	 margin: auto;
 	 padding: 0 1rem;
 	 max-width: 71.25rem;
@@ -49,21 +313,13 @@
 	 align-items: end;
  }
      
-     @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
  * {
 	 box-sizing: border-box;
 }
  *::before, *::after {
 	 box-sizing: border-box;
 }
- body {
-	 font-family: "Barlow", sans-serif;
-	 font-size: 1.125rem;
-	 line-height: 1.5;
-	 color: #787878;
-	 background: #fef7f7;
-	 text-rendering: optimizeLegibility;
-}
+
  ul li {
 	 margin: 0 1.5rem 0 0;
 }
@@ -102,8 +358,8 @@
 	 font-size: 1.25rem;
 }
  .gallery {
-	 padding: 0 0 4rem 0;
-     background-image: linear-gradient(#ea8478,#fce2e2,#fce2e2,#fce2e2,#fce2e2,#fce2e2, #fef7f7, #fef7f7, #fef7f7, #fef7f7, #fef7f7, #fef7f7);
+	 padding: 0 0 1em 0;
+    background-image:#fef7f7;
 }
 
  .img-container {
@@ -111,7 +367,9 @@
 	 height: 500px;
 	 cursor: pointer;
 	 overflow: hidden;
-     padding: 0%;
+   padding: 0%;
+   padding-right: 0;
+   padding-left: 5%;
 }
  .img-container:hover .img-content-hover {
 	 display: block;
@@ -163,16 +421,8 @@ font-size: 1.5rem;
 	 display: inline-block;
      color: #787878;
 }
- footer {
-	 padding: 1rem 0;
-	 background: #f7f7f7;
-	 text-align: center;
-}
- @supports (display: grid) {
-	 .gallery .grid {
-		 grid-gap: 1rem;
-	}
-}
+
+
 
 .grid {
   display: -webkit-box;
