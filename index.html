@@ -10,15 +10,16 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-  <header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header role="banner">
     <h1 class="title">
       Stella Clough
     </h1>
   </header>
 
   <div class="wrapper">
-    <div class="containera">
-      <ul>
+    <div class="containera" role="region" aria-label="Rotating taglines">
+      <ul aria-live="polite" aria-atomic="true">
         <li class="role">I love web.</li>
         <li class="role">I create.</li>
         <li class="role">I learn.</li>
@@ -27,12 +28,15 @@
         <li class="role">I read.</li>
       </ul>
     </div>
-    <section>
-      <a href="#" class="go-down"></a>
-    </section>
+    <nav aria-label="Page navigation">
+      <a href="#aboutme" class="go-down" aria-label="Scroll down to about section">
+        <span class="visually-hidden">Scroll down</span>
+      </a>
+    </nav>
   </div>
 
-<section class="aboutme">
+<main id="main-content">
+<section class="aboutme" id="aboutme">
   <div class="container">
     <h2 class="subtitle">About me</h2>
     <p class="text">
@@ -45,21 +49,22 @@
 </section>
 
 
-<section class="gallery">
+<section class="gallery" aria-label="Portfolio projects">
   <div class="container">
+    <h2 class="visually-hidden">Projects</h2>
     <div class="grid">
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <a href="https://misspastelwitch.github.io/repositorie/">
-            <img src="./assets/repositorie.png" alt="Repositorie project">
+          <a href="https://misspastelwitch.github.io/repositorie/" aria-label="View Repositorie project">
+            <img src="./assets/repositorie.png" alt="Screenshot of Repositorie project showing project interface">
           </a>
           <figcaption class="img-content">
-            <h2 class="title">Repositorie</h2>
-            <h3 class="category">Have a look</h3>
+            <h3 class="title">Repositorie</h3>
+            <p class="category">Have a look</p>
           </figcaption>
-          <span class="img-content-hover">
-            <h2 class="title">Repositorie</h2>
-            <h3 class="category">Have a look</h3>
+          <span class="img-content-hover" aria-hidden="true">
+            <span class="title">Repositorie</span>
+            <span class="category">Have a look</span>
           </span>
         </figure>
       </div>
@@ -67,16 +72,16 @@
 
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <a href="https://dutchdigitalagencies-vacatures.onrender.com">
-            <img src="./assets/DDA.png" alt="Dutch Digital Agencies project">
+          <a href="https://dutchdigitalagencies-vacatures.onrender.com" aria-label="View Dutch Digital Agencies project">
+            <img src="./assets/DDA.png" alt="Screenshot of Dutch Digital Agencies project showing agency listings">
           </a>
           <figcaption class="img-content">
-            <h2 class="title">Dutch Digital Agencies</h2>
-            <h3 class="category">Have a look</h3>
+            <h3 class="title">Dutch Digital Agencies</h3>
+            <p class="category">Have a look</p>
           </figcaption>
-          <span class="img-content-hover">
-            <h2 class="title">Dutch Digital Agencies</h2>
-            <h3 class="category">Have a look</h3>
+          <span class="img-content-hover" aria-hidden="true">
+            <span class="title">Dutch Digital Agencies</span>
+            <span class="category">Have a look</span>
           </span>
         </figure>
       </div>
@@ -84,16 +89,16 @@
 
       <div class="column-xs-12 column-md-4">
         <figure class="img-container">
-          <a href="https://github.com/misspastelwitch/the-startup-responsive-interactive-website">
-            <img src="./assets/weirdcoolstuff.png" alt="Weird Cool Stuff project">
+          <a href="https://github.com/misspastelwitch/the-startup-responsive-interactive-website" aria-label="View Weird Cool Stuff project on GitHub">
+            <img src="./assets/weirdcoolstuff.png" alt="Screenshot of Weird Cool Stuff project showing interactive website design">
           </a>
           <figcaption class="img-content">
-            <h2 class="title">Weird Cool Stuff</h2>
-            <h3 class="category">Have a look</h3>
+            <h3 class="title">Weird Cool Stuff</h3>
+            <p class="category">Have a look</p>
           </figcaption>
-          <span class="img-content-hover">
-            <h2 class="title">Weird Cool Stuff</h2>
-            <h3 class="category">Have a look</h3>
+          <span class="img-content-hover" aria-hidden="true">
+            <span class="title">Weird Cool Stuff</span>
+            <span class="category">Have a look</span>
           </span>
         </figure>
       </div>
@@ -101,16 +106,16 @@
 
       <div class="column-xs-12 column-md-6">
         <figure class="img-container">
-          <a href="https://misspastelwitch.github.io/I-love-web/">
-            <img src="./assets/iloveweb.png" alt="I love web project">
+          <a href="https://misspastelwitch.github.io/I-love-web/" aria-label="View I love web project">
+            <img src="./assets/iloveweb.png" alt="Screenshot of I love web project featuring web development showcase">
           </a>
           <figcaption class="img-content">
-            <h2 class="title">I love web</h2>
-            <h3 class="category">Have a look</h3>
+            <h3 class="title">I love web</h3>
+            <p class="category">Have a look</p>
           </figcaption>
-          <span class="img-content-hover">
-            <h2 class="title">I love web</h2>
-            <h3 class="category">Have a look</h3>
+          <span class="img-content-hover" aria-hidden="true">
+            <span class="title">I love web</span>
+            <span class="category">Have a look</span>
           </span>
         </figure>
       </div>
@@ -118,16 +123,16 @@
 
       <div class="column-xs-12 column-md-6">
         <figure class="img-container">
-          <a href="https://github.com/julia-stevens/your-tribe-for-life-squad-page">
-            <img src="./assets/squadpage.png" alt="FDND Squadpage project">
+          <a href="https://github.com/julia-stevens/your-tribe-for-life-squad-page" aria-label="View FDND Squadpage project on GitHub">
+            <img src="./assets/squadpage.png" alt="Screenshot of FDND Squadpage project showing team page layout">
           </a>
           <figcaption class="img-content">
-            <h2 class="title">FDND Squadpage</h2>
-            <h3 class="category">Have a look</h3>
+            <h3 class="title">FDND Squadpage</h3>
+            <p class="category">Have a look</p>
           </figcaption>
-          <span class="img-content-hover">
-            <h2 class="title">FDND Squadpage</h2>
-            <h3 class="category">Have a look</h3>
+          <span class="img-content-hover" aria-hidden="true">
+            <span class="title">FDND Squadpage</span>
+            <span class="category">Have a look</span>
           </span>
         </figure>
       </div>
@@ -135,30 +140,30 @@
 
       <div class="column-xs-12 column-md-6">
         <figure class="img-container">
-          <a href="https://www.sron.nl/en/missions/in-development/missies-in-development-nebula-xplorer/">
-            <img src="./assets/nebula.png" alt="SRON Nebula Explorer project">
+          <a href="https://www.sron.nl/en/missions/in-development/missies-in-development-nebula-xplorer/" aria-label="View SRON Nebula Explorer project information">
+            <img src="./assets/nebula.png" alt="Screenshot of SRON Nebula Explorer project showing space mission interface">
           </a>
           <figcaption class="img-content">
-            <h2 class="title">SRON - Nebula Explorer</h2>
-            <h3 class="category">Something's coming here soon!</h3>
+            <h3 class="title">SRON - Nebula Explorer</h3>
+            <p class="category">Something's coming here soon!</p>
           </figcaption>
-          <span class="img-content-hover">
-            <h2 class="title">SRON - Nebula Explorer</h2>
-            <h3 class="category">Something's coming here soon!</h3>
+          <span class="img-content-hover" aria-hidden="true">
+            <span class="title">SRON - Nebula Explorer</span>
+            <span class="category">Something's coming here soon!</span>
           </span>
         </figure>
       </div>
 
       <div class="column-xs-12 column-md-6">
         <figure class="img-container">
-          <img src="./assets/noimage.png" alt="Upcoming project">
+          <img src="./assets/noimage.png" alt="Placeholder for upcoming project" role="img">
           <figcaption class="img-content">
-            <h2 class="title">An upcoming project</h2>
-            <h3 class="category">Something's coming here soon!</h3>
+            <h3 class="title">An upcoming project</h3>
+            <p class="category">Something's coming here soon!</p>
           </figcaption>
-          <span class="img-content-hover">
-            <h2 class="title">An upcoming project</h2>
-            <h3 class="category">Something's coming here soon!</h3>
+          <span class="img-content-hover" aria-hidden="true">
+            <span class="title">An upcoming project</span>
+            <span class="category">Something's coming here soon!</span>
           </span>
         </figure>
       </div>
@@ -166,12 +171,15 @@
     </div>
   </div>
 </section>
+</main>
 
-  <section>
-    <a href="#" class="scroll-up"></a>
-  </section>
+  <nav aria-label="Back to top navigation">
+    <a href="#main-content" class="scroll-up" aria-label="Scroll back to top">
+      <span class="visually-hidden">Back to top</span>
+    </a>
+  </nav>
 
-  <footer>
+  <footer role="contentinfo">
     <p class="footer-text">© 2024 Stella Clough</p>
   </footer>
 </body>
