@@ -10,12 +10,12 @@ function showImgContent(e) {
 
 document.addEventListener("mousemove", showImgContent);
 
-const cornflowerBlue = { r: 100, g: 149, b: 237 };
+const cornflowerBlue = { r: 195, g: 214, b: 248 };
 
 window.addEventListener('scroll', () => {
   const scrollPercentage = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
 
-  const startColor = { r: 255, g: 255, b: 255 };
+  const startColor = { r: 254, g: 247, b: 247 };
 
   const r = Math.round(startColor.r + (cornflowerBlue.r - startColor.r) * scrollPercentage);
   const g = Math.round(startColor.g + (cornflowerBlue.g - startColor.g) * scrollPercentage);

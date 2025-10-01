@@ -19,7 +19,7 @@ body {
   padding: 0;
   max-width: fit-content;
   overflow-x: hidden;
-  background-color: #ffffff;
+  background-color: #fef7f7;
   transition: background-color 0.1s ease-out;
 }
 
@@ -155,7 +155,7 @@ header {
 
 /* About me section */
 .aboutme {
-  background-color: #fef7f7;
+  background-color: #ffe8e8;
   padding: 5rem;
   margin-top: -5rem;
 }
@@ -198,7 +198,7 @@ header {
 
 .scroll-up:hover:before,
 .scroll-up:focus:before {
-  border-color: #ffffff;
+  border-color: #fef7f7;
 }
 
 .scroll-up:focus-visible {
@@ -251,7 +251,8 @@ header {
 
 .go-down:hover:before,
 .go-down:focus:before {
-  border-color: #ffffff;
+  border-color: #C3D6F8;
+  
 }
 
 .go-down:focus-visible {
@@ -462,7 +463,7 @@ img:hover {
   white-space: nowrap;
   display: none;
   padding: 1rem;
-  background: #fff;
+  background: #fef7f7;
   font-weight: 400;
   margin-top: 1.25rem;
   margin-left: -2rem;
@@ -564,7 +565,7 @@ img:hover {
   top: -40px;
   left: 0;
   background: #d64545;
-  color: white;
+  color: #fef7f7;
   padding: 8px 16px;
   text-decoration: none;
   z-index: 100;
