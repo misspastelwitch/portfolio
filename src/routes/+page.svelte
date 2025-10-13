@@ -1,12 +1,12 @@
 
 <script>
 	import { onMount } from 'svelte';
-	import Header from './Header.svelte';
-	import Hero from './Hero.svelte';
-	import About from './About.svelte';
-	import Gallery from './Gallery.svelte';
-	import ScrollButtons from './ScrollButtons.svelte';
-	import Footer from './Footer.svelte';
+	import Header from '$lib/Header.svelte';
+	import Hero from '$lib/Hero.svelte';
+	import About from '$lib/About.svelte';
+	import Gallery from '$lib/Gallery.svelte';
+	import ScrollButtons from '$lib/ScrollButtons.svelte';
+	import Footer from '$lib/Footer.svelte';
 
 	let bgColor = 'rgb(254, 247, 247)';
 
