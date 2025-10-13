@@ -2,7 +2,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import Header from '$lib/Header.svelte';
-	import Hero from '$lib/Hero.svelte';
 	import About from '$lib/About.svelte';
 	import Gallery from '$lib/Gallery.svelte';
 	import ScrollButtons from '$lib/ScrollButtons.svelte';
@@ -46,7 +45,6 @@
 	<a href="#main-content" class="skip-link">Skip to main content</a>
 
 	<Header />
-	<Hero />
 
 	<main id="main-content">
 		<About />
