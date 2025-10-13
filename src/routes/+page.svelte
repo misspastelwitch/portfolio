@@ -4,7 +4,6 @@
 	import Header from '$lib/Header.svelte';
 	import About from '$lib/About.svelte';
 	import Gallery from '$lib/Gallery.svelte';
-	import ScrollButtons from '$lib/ScrollButtons.svelte';
 	import Footer from '$lib/Footer.svelte';
 
 	let bgColor = 'rgb(254, 247, 247)';
@@ -51,7 +50,6 @@
 		<Gallery />
 	</main>
 
-	<ScrollButtons />
 	<Footer />
 </div>
 
