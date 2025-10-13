@@ -30,7 +30,7 @@
 	.scroll-up {
 		opacity: 1;
 		transition: all 0.5s ease-in 3s;
-		margin-top: 5%;
+		margin: 5% auto 0;
 		display: block;
 		width: 32px;
 		height: 32px;
@@ -102,9 +102,4 @@
 		border: 0;
 	}
 
-	@media (max-width: 48rem) {
-		.scroll-up {
-			margin-left: calc(50% - 16px);
-		}
-	}
 </style>
