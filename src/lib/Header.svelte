@@ -45,7 +45,7 @@
 	header {
 		text-align: center;
 		margin: 1em auto;
-		margin-top: 250px;
+		padding-top: 2em;
 	}
 
 	.title {
@@ -165,7 +165,7 @@
 
 	@media (max-width: 48rem) {
 		header {
-			margin-top: 100px;
+			padding-top: 2em;
 		}
 
 		.title {
@@ -193,7 +193,7 @@
 
 	@media (max-width: 375px) {
 		header {
-			margin-top: 60px;
+			padding-top: 2em;
 		}
 
 		.title {
