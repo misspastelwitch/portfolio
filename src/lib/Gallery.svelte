@@ -7,28 +7,28 @@
 	const projects = [
 		{
 			title: 'Repositorie',
-			image: '/assets/repositorie.png',
+			image: './assets/repositorie.png',
 			alt: 'Screenshot of Repositorie project showing project interface',
 			link: 'https://misspastelwitch.github.io/repositorie/',
 			category: 'Have a look'
 		},
 		{
 			title: 'Dutch Digital Agencies',
-			image: '/assets/DDA.png',
+			image: './assets/DDA.png',
 			alt: 'Screenshot of Dutch Digital Agencies project showing agency listings',
 			link: 'https://dutchdigitalagencies-vacatures.onrender.com',
 			category: 'Have a look'
 		},
 		{
 			title: 'Weird Cool Stuff',
-			image: '/assets/weirdcoolstuff.png',
+			image: './assets/weirdcoolstuff.png',
 			alt: 'Screenshot of Weird Cool Stuff project showing interactive website design',
 			link: 'https://github.com/misspastelwitch/the-startup-responsive-interactive-website',
 			category: 'Have a look'
 		},
 		{
 			title: 'I love web',
-			image: '/assets/iloveweb.png',
+			image: './assets/iloveweb.png',
 			alt: 'Screenshot of I love web project featuring web development showcase',
 			link: 'https://misspastelwitch.github.io/I-love-web/',
 			category: 'Have a look',
@@ -36,7 +36,7 @@
 		},
 		{
 			title: 'FDND Squadpage',
-			image: '/assets/squadpage.png',
+			image: './assets/squadpage.png',
 			alt: 'Screenshot of FDND Squadpage project showing team page layout',
 			link: 'https://github.com/julia-stevens/your-tribe-for-life-squad-page',
 			category: 'Have a look',
@@ -44,7 +44,7 @@
 		},
 		{
 			title: 'SRON - Nebula Explorer',
-			image: '/assets/nebula.png',
+			image: './assets/nebula.png',
 			alt: 'Screenshot of SRON Nebula Explorer project showing space mission interface',
 			link: 'https://www.sron.nl/en/missions/in-development/missies-in-development-nebula-xplorer/',
 			category: "Something's coming here soon!",
@@ -52,7 +52,7 @@
 		},
 		{
 			title: 'An upcoming project',
-			image: '/assets/noimage.png',
+			image: './assets/noimage.png',
 			alt: 'Placeholder for upcoming project',
 			link: null,
 			category: "Something's coming here soon!",
