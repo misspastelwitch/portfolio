@@ -1,70 +1,42 @@
 const imgContent = document.querySelectorAll(".img-content-hover");
 
 function showImgContent(e) {
-  for (var i = 0; i < imgContent.length; i++) {
-    x = e.pageX;
-    y = e.pageY;
+  for (let i = 0; i < imgContent.length; i++) {
+    const x = e.pageX;
+    const y = e.pageY;
     imgContent[i].style.transform = `translate3d(${x}px, ${y}px, 0)`;
   }
 }
 
 document.addEventListener("mousemove", showImgContent);
 
-const [red, green, blue] = [69, 111, 225]
-const section1 = document.querySelector('.section1')
-window.addEventListener('scroll', () => {
-  const y = 1 + (window.scrollY || window.pageYOffset) / 150
-  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-  section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`})
+const cornflowerBlue = { r: 195, g: 214, b: 248 };
 
-/* Automatic scroll up*/
-$(function() {
-  $('.scroll-up').click (function() {
-    $('html, body').animate({scrollTop: document.body.scrollHeight }, 'slow');
-    return false;
+window.addEventListener('scroll', () => {
+  const scrollPercentage = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
+
+
+  const startColor = { r: 254, g: 247, b: 247 };
+
+  const r = Math.round(startColor.r + (cornflowerBlue.r - startColor.r) * scrollPercentage);
+  const g = Math.round(startColor.g + (cornflowerBlue.g - startColor.g) * scrollPercentage);
+  const b = Math.round(startColor.b + (cornflowerBlue.b - startColor.b) * scrollPercentage);
+
+  document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+});
+
+document.querySelector('.scroll-up')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
 });
 
-
-/* Cursor */
-var canvas = document.getElementById('paint');
-var ctx = canvas.getContext('2d');
- 
-var sketch = document.getElementById('sketch');
-var sketch_style = getComputedStyle(sketch);
-canvas.width = 500;
-canvas.height = 250;
-
-var mouse = {x: 0, y: 0};
- 
-/* Mouse Capturing Work */
-canvas.addEventListener('mousemove', function(e) {
-  mouse.x = e.pageX - this.offsetLeft;
-  mouse.y = e.pageY - this.offsetTop;
-}, false);
-console.log ('first 25 lines of JS are error-free')
-
-
-/* Drawing on Paint App */
-ctx.lineJoin = 'round';
-ctx.lineCap = 'round';
-ctx.strokeStyle = "#0a2472";
-
-//ctx.strokeStyle = 
-//ctx.strokeStyle = document.settings.colour[1].value;
- 
-canvas.addEventListener('mousedown', function(e) {
-    ctx.beginPath();
-    ctx.moveTo(mouse.x, mouse.y);
- 
-    canvas.addEventListener('mousemove', onPaint, false);
-}, false);
- 
-canvas.addEventListener('mouseup', function() {
-    canvas.removeEventListener('mousemove', onPaint, false);
-}, false);
- 
-var onPaint = function() {
-    ctx.lineTo(mouse.x, mouse.y);
-    ctx.stroke();
-};
+document.querySelector('.go-down')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
+});

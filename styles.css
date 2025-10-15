@@ -21,6 +21,8 @@ body {
   padding: 0;
   max-width: fit-content;
   overflow-x: hidden;
+   background-color: #fef7f7;
+  transition: background-color 0.1s ease-out;
 }
 
 * {
@@ -146,7 +148,7 @@ input[class='button']:hover {
 /* about me */
 
 .aboutme {
-  background-color: #fef7f7;
+background-color: #ffe8e8;
   padding: 5rem;
   margin-top: -5rem;
 }
