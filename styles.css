@@ -173,8 +173,8 @@ input[class='button']:hover {
 /* education section */
 
 .education {
-  background-color: #a9c3f8;
-  color:#fff;
+  background-color: #dbdaf5;
+  color:rgb(241, 109, 109);
     display: grid;
     padding: 0;
     width: 100%
@@ -196,7 +196,7 @@ input[class='button']:hover {
 }
 }
 
-/* footer */
+/* footer/contact */
 
 .footer {
   background-color: #a9c3f8;
