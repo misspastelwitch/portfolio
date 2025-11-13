@@ -169,6 +169,33 @@ input[class='button']:hover {
 }
 }
 
+
+/* education section */
+
+.education {
+  background-color: #a9c3f8;
+  color:#fff;
+    display: grid;
+    padding: 0;
+    width: 100%
+    
+}
+
+@media (min-width: 500px) {
+  .education {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: -5rem;
+}
+}
+
+@media (min-width: 760px) {
+  .education {
+  padding: 5rem;
+  margin-top: -5rem;
+}
+}
+
 /*up button*/
 
 
