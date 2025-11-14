@@ -16,12 +16,12 @@ html {
 body {
   font-family: 'Space Mono', monospace;
   line-height: 1.5;
-  color: lightcoral;
+  color:rgb(241, 109, 109);
   margin: 0 auto;
   padding: 0;
   max-width: fit-content;
   overflow-x: hidden;
-   background-color: #fef7f7;
+  background-color: #fef7f7;
   transition: background-color 0.1s ease-out;
 }
 
@@ -148,7 +148,7 @@ input[class='button']:hover {
 /* about me */
 
 .aboutme {
-  background-color: #ffe8e8;
+  background-color: #ffdfdb;
     display: grid;
     padding: 0;
     width: 100%

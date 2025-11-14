@@ -16,7 +16,7 @@ function showImgContent(e) {
     const scrollPercentage = Math.min((window.scrollY - (document.body.scrollHeight - window.innerHeight) * 0.75) / (document.body.scrollHeight - window.innerHeight - (document.body.scrollHeight - window.innerHeight) * 0.75), 1);
     const clampedScrollPercentage = Math.max(0, Math.min(scrollPercentage, 1));
 
-    const startColor = { r: 254, g: 247, b: 247 };
+    const startColor = { r: 254, g: 242, b: 241 };
 
     const r = Math.round(startColor.r + (cornflowerBlue.r - startColor.r) * clampedScrollPercentage);
     const g = Math.round(startColor.g + (cornflowerBlue.g - startColor.g) * clampedScrollPercentage);
