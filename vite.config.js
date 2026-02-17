@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-  // add other Vite options here if needed
+  plugins: [vue()],
 });
