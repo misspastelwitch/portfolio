@@ -146,49 +146,49 @@ const projects = [
   {
     title: "Repositorie",
     category: "Have a look",
-    image: "./static/assets/repositorie-Photoroom.png",
+    image: "./public/static/assets/repositorie-Photoroom.png",
     link: "https://misspastelwitch.github.io/repositorie",
     cols: "md:col-span-4"
   },
   {
     title: "Dutch Digital Agencies",
     category: "Have a look",
-    image: "./static/assets/DDA-photoroom.png",
+    image: "./public/static/assets/DDA-photoroom.png",
     link: "https://dutchdigitalagencies-vacatures.onrender.com",
     cols: "md:col-span-4"
   },
   {
     title: "Weird Cool Stuff",
     category: "Have a look",
-    image: "./static/assets/lab-digital-Photoroom.png",
+    image: "./public/static/assets/lab-digital-Photoroom.png",
     link: "https://github.com/misspastelwitch/the-startup-responsive-interactive-website",
     cols: "md:col-span-4"
   },
   {
     title: "I love web",
     category: "Have a look",
-    image: "./static/assets/iloveweb-Photoroom.png",
+    image: "./public/static/assets/iloveweb-Photoroom.png",
     link: "https://misspastelwitch.github.io/I-love-web/",
     cols: "md:col-span-6"
   },
   {
     title: "FDND Squadpage",
     category: "Have a look",
-    image: "./static/assets/squadpage-Photoroom.png",
+    image: "./public/static/assets/squadpage-Photoroom.png",
     link: "https://github.com/julia-stevens/your-tribe-for-life-squad-page",
     cols: "md:col-span-6"
   },
   {
     title: "SRON - Nebula Explorer",
     category: "Something's coming here soon!",
-    image: "./static/assets/SRON-Photoroom.png",
+    image: "./public/static/assets/SRON-Photoroom.png",
     link: "https://github.com/fdnd-agency/nebulaxplorer",
     cols: "md:col-span-6"
   },
   {
     title: "Your company here...?",
     category: "It's the start of something beautiful!",
-    image: "./static/assets/you-Photoroom.png",
+    image: "./public/static/assets/you-Photoroom.png",
     link: "#",
     cols: "md:col-span-2"
   }
@@ -198,14 +198,14 @@ const bottomProjects = [
   {
     title: "An upcoming project",
     category: "Something's coming here soon!",
-    image: "./static/assets/more-soon-Photoroom.png",
+    image: "./public/static/assets/more-soon-Photoroom.png",
     link: "#",
     cols: "md:col-span-3"
   },
   {
     title: "My GitHub",
     category: "Take a peek at my code",
-    image: "./static/assets/more-soon-1-Photoroom.png",
+    image: "./public/static/assets/more-soon-1-Photoroom.png",
     link: "https://github.com/misspastelwitch",
     cols: "md:col-span-3"
   }
