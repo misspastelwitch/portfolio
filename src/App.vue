@@ -4,41 +4,33 @@
     :style="{ backgroundColor: bgColor }"
     @mousemove="handleMouseMove"
   >
-    <!-- Header -->
-    <header class="text-center mt-64 mb-8">
-      <h1 class="text-6xl md:text-8xl font-bold">Stella Clough</h1>
-    </header>
+    <div class="px-[10%]">
+      <!-- Header -->
+      <header class="text-center mt-32 md:mt-64 mb-8">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold break-words">Stella Clough</h1>
+      </header>
 
-    <!-- Animated roles -->
-    <div class="w-96 mx-auto px-4 mb-96">
-      <div class="h-16 overflow-hidden">
-        <ul 
-          class="transition-transform duration-500"
-          :style="{ transform: `translateY(-${currentRole * 70}px)` }"
-        >
-          <li 
-            v-for="(role, index) in roles" 
-            :key="index" 
-            class="text-4xl h-[70px] leading-[70px]"
+      <!-- Animated roles -->
+      <div class="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto mb-48 md:mb-96">
+        <div class="h-12 sm:h-14 md:h-16 overflow-hidden inline-block">
+          <ul 
+            class="transition-transform duration-500 ease-in-out"
+            :style="{ transform: `translateY(-${currentRole * roleHeight}px)` }"
           >
-            {{ role }}
-          </li>
-        </ul>
+            <li 
+              v-for="(role, index) in roles" 
+              :key="index" 
+              class="text-2xl sm:text-3xl md:text-4xl h-12 sm:h-14 md:h-16 leading-[48px] sm:leading-[56px] md:leading-[64px]"
+            >
+              {{ role }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <!-- Scroll down button -->
-    <div class="flex justify-center mb-20">
-      <button 
-        @click="scrollToBottom"
-        class="w-8 h-8 border-2 border-red-400 rounded-full relative animate-bounce hover:scale-110 transition-transform"
-      >
-        <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 border-2 border-red-400 border-t-0 border-r-0 rotate-[-45deg]" />
-      </button>
-    </div>
-
     <!-- About Me Section -->
-    <section class="bg-[#ffdfdb] py-8 md:py-20 px-4 md:px-20 -mt-20">
+    <section class="bg-[#ffdfdb] py-8 md:py-20 px-[10%] -mt-20">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-bold mb-6">About me</h2>
         <p class="text-lg leading-relaxed">
@@ -52,7 +44,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="py-20 px-4">
+    <section class="py-20 px-[10%]">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
           <ProjectCard 
@@ -66,7 +58,7 @@
     </section>
 
     <!-- Education Section -->
-    <section class="bg-[#dbdaf5] py-8 md:py-20 px-4 md:px-20 -mt-20">
+    <section class="bg-[#dbdaf5] py-8 md:py-20 px-[10%] -mt-20">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-bold mb-6">Education</h2>
         <p class="text-lg leading-relaxed">
@@ -81,22 +73,8 @@
       </div>
     </section>
 
-    <!-- Bottom Projects -->
-    <section class="py-20 px-4">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <ProjectCard 
-            v-for="(project, index) in bottomProjects" 
-            :key="`bottom-${index}`"
-            :project="project" 
-            :mouse-pos="mousePos"
-          />
-        </div>
-      </div>
-    </section>
-
     <!-- Footer/Contact Section -->
-    <section class="bg-[#a9c3f8] text-white py-8 md:py-20 px-4 md:px-20 -mt-20">
+    <section class="bg-[#a9c3f8] text-white py-8 md:py-20 px-[10%] -mt-20">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-bold mb-6">What now?</h2>
         <p class="text-lg leading-relaxed">
@@ -108,15 +86,7 @@
       </div>
     </section>
 
-    <!-- Scroll up button -->
-    <div class="flex justify-center py-10">
-      <button 
-        @click="scrollToTop"
-        class="w-8 h-8 border-2 border-red-400 rounded-full relative hover:scale-110 transition-transform"
-      >
-        <span class="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 border-2 border-red-400 border-t-0 border-r-0 rotate-[135deg]" />
-      </button>
-    </div>
+    <!-- Bottom Projects -->
 
     <!-- Footer -->
     <footer class="text-center pb-8">
@@ -132,63 +102,59 @@ import ProjectCard from './components/ProjectCard.vue';
 const currentRole = ref(0);
 const bgColor = ref('rgb(254, 242, 241)');
 const mousePos = ref({ x: 0, y: 0 });
+const roleHeight = ref(48); // Default for mobile
 
-const roles = [
-  "I love web.",
-  "I create.",
-  "I learn.",
-  "I travel.",
-  "I bake.",
-  "I read."
-];
+// const roles = [
+//   "I love web.",
+//   "I create.",
+//   "I learn.",
+//   "I travel.",
+//   "I bake.",
+//   "I read."
+// ];
 
 const projects = [
   {
     title: "Repositorie",
-    category: "Have a look",
-    image: "./public/static/assets/repositorie-Photoroom.png",
+    image: "/static/assets/repositorie-Photoroom.png",
     link: "https://misspastelwitch.github.io/repositorie",
     cols: "md:col-span-4"
   },
   {
     title: "Dutch Digital Agencies",
-    category: "Have a look",
-    image: "./public/static/assets/DDA-photoroom.png",
+    image: "/static/assets/DDA-photoroom.png",
     link: "https://dutchdigitalagencies-vacatures.onrender.com",
     cols: "md:col-span-4"
   },
   {
     title: "Weird Cool Stuff",
-    category: "Have a look",
-    image: "./public/static/assets/lab-digital-Photoroom.png",
+    image: "/static/assets/lab-digital-Photoroom.png",
     link: "https://github.com/misspastelwitch/the-startup-responsive-interactive-website",
     cols: "md:col-span-4"
   },
   {
     title: "I love web",
-    category: "Have a look",
-    image: "./public/static/assets/iloveweb-Photoroom.png",
+    image: "/static/assets/iloveweb-Photoroom.png",
     link: "https://misspastelwitch.github.io/I-love-web/",
     cols: "md:col-span-6"
   },
   {
     title: "FDND Squadpage",
-    category: "Have a look",
-    image: "./public/static/assets/squadpage-Photoroom.png",
+    image: "/static/assets/squadpage-Photoroom.png",
     link: "https://github.com/julia-stevens/your-tribe-for-life-squad-page",
     cols: "md:col-span-6"
   },
   {
     title: "SRON - Nebula Explorer",
     category: "Something's coming here soon!",
-    image: "./public/static/assets/SRON-Photoroom.png",
+    image: "/static/assets/SRON-Photoroom.png",
     link: "https://github.com/fdnd-agency/nebulaxplorer",
     cols: "md:col-span-6"
   },
   {
     title: "Your company here...?",
     category: "It's the start of something beautiful!",
-    image: "./public/static/assets/you-Photoroom.png",
+    image: "/static/assets/you-Photoroom.png",
     link: "#",
     cols: "md:col-span-2"
   }
@@ -196,29 +162,22 @@ const projects = [
 
 const bottomProjects = [
   {
-    title: "An upcoming project",
-    category: "Something's coming here soon!",
-    image: "./public/static/assets/more-soon-Photoroom.png",
-    link: "#",
-    cols: "md:col-span-3"
-  },
-  {
     title: "My GitHub",
     category: "Take a peek at my code",
-    image: "./public/static/assets/more-soon-1-Photoroom.png",
+    image: "/static/assets/more-soon-1-Photoroom.png",
     link: "https://github.com/misspastelwitch",
     cols: "md:col-span-3"
   }
 ];
 
-// acticities cycle
+// Cycle through roles
 let roleInterval;
 onMounted(() => {
   roleInterval = setInterval(() => {
     currentRole.value = (currentRole.value + 1) % roles.length;
   }, 4000 / roles.length);
 
-  // scroll listener for background color
+  // Add scroll listener for background color
   window.addEventListener('scroll', handleScroll);
 });
 
@@ -257,4 +216,5 @@ const scrollToBottom = () => {
 </script>
 
 <style scoped>
+/* Add any component-specific styles here if needed */
 </style>
